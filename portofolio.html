@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portofolio dan resume digital Thouf Hazza Tedya Putera, mahasiswa Teknik Informatika.">
+  <title>Thouf Hazza Tedya Putera | Portofolio &amp; Resume Digital</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#konten">Lewati ke konten utama</a>
+
+  <div class="page">
+
+    <!-- Profil singkat: sidebar di desktop, bagian atas di mobile -->
+    <header class="profile" id="beranda">
+      <img class="avatar" src="./roblox.png" alt="Foto profil Thouf Hazza Tedya Putera" width="334" height="303">
+      <h1>Thouf Hazza Tedya Putera</h1>
+      <p class="role">Mahasiswa Teknik Informatika &middot; Web Developer</p>
+
+      <nav class="main-nav" aria-label="Navigasi utama">
+        <ul>
+          <li><a href="#tentang">Tentang</a></li>
+          <li><a href="#pendidikan">Pendidikan</a></li>
+          <li><a href="#pengalaman">Pengalaman</a></li>
+          <li><a href="#keahlian">Keahlian</a></li>
+          <li><a href="#proyek">Proyek</a></li>
+          <li><a href="#kontak">Kontak</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main id="konten">
+
+      <section id="tentang" aria-labelledby="judul-tentang">
+        <h2 id="judul-tentang">Tentang saya</h2>
+        <p>
+          Saya mahasiswa semester 5 yang tertarik pada pengembangan web dan
+          antarmuka yang mudah digunakan. Saat ini saya sedang mendalami HTML5,
+          CSS3, dan dasar-dasar JavaScript melalui mata kuliah Pemrograman Web.
+        </p>
+        <p>
+          Saya suka membuat halaman yang rapi, cepat dibuka, dan nyaman dibaca
+          di layar apa pun. Saya sedang mencari kesempatan magang sebagai
+          front-end developer.
+        </p>
+        <dl class="facts">
+          <div><dt>Lokasi</dt><dd>Malang, Jawa Timur</dd></div>
+          <div><dt>Status</dt><dd>Mahasiswa aktif</dd></div>
+          <div><dt>Bahasa</dt><dd>Indonesia, Inggris</dd></div>
+        </dl>
+      </section>
+
+      <section id="pendidikan" aria-labelledby="judul-pendidikan">
+        <h2 id="judul-pendidikan">Pendidikan</h2>
+        <ol class="timeline">
+          <li>
+            <article>
+              <h3>S1 Teknik Informatika</h3>
+              <p class="meta">Nama Universitas &middot; <time datetime="2023-09">2023</time> &ndash; sekarang</p>
+              <p>IPK 3,60. Fokus pada pemrograman web, basis data, dan rekayasa perangkat lunak.</p>
+            </article>
+          </li>
+          <li>
+            <article>
+              <h3>SMA Jurusan IPA</h3>
+              <p class="meta">Nama SMA &middot; <time datetime="2020-07">2020</time> &ndash; <time datetime="2023-06">2023</time></p>
+              <p>Aktif di ekstrakurikuler komputer dan Karya Ilmiah Remaja.</p>
+            </article>
+          </li>
+        </ol>
+      </section>
+
+      <section id="pengalaman" aria-labelledby="judul-pengalaman">
+        <h2 id="judul-pengalaman">Pengalaman</h2>
+        <ol class="timeline">
+          <li>
+            <article>
+              <h3>Asisten Praktikum Pemrograman Web</h3>
+              <p class="meta">Laboratorium Informatika &middot; <time datetime="2025-09">2025</time> &ndash; sekarang</p>
+              <p>Membimbing 30 mahasiswa dalam praktikum HTML dan CSS serta menilai tugas mingguan.</p>
+            </article>
+          </li>
+          <li>
+            <article>
+              <h3>Anggota Divisi Media</h3>
+              <p class="meta">Himpunan Mahasiswa Informatika &middot; <time datetime="2024-02">2024</time> &ndash; <time datetime="2025-01">2025</time></p>
+              <p>Mengelola situs dan konten publikasi kegiatan himpunan.</p>
+            </article>
+          </li>
+        </ol>
+      </section>
+
+      <section id="keahlian" aria-labelledby="judul-keahlian">
+        <h2 id="judul-keahlian">Keahlian</h2>
+        <ul class="skills">
+          <li>
+            <label for="s-html">HTML5</label>
+            <meter id="s-html" min="0" max="100" value="90">90%</meter>
+          </li>
+          <li>
+            <label for="s-css">CSS3 &amp; Layouting</label>
+            <meter id="s-css" min="0" max="100" value="85">85%</meter>
+          </li>
+          <li>
+            <label for="s-js">JavaScript dasar</label>
+            <meter id="s-js" min="0" max="100" value="60">60%</meter>
+          </li>
+          <li>
+            <label for="s-git">Git &amp; GitHub</label>
+            <meter id="s-git" min="0" max="100" value="70">70%</meter>
+          </li>
+          <li>
+            <label for="s-sql">SQL &amp; MySQL</label>
+            <meter id="s-sql" min="0" max="100" value="65">65%</meter>
+          </li>
+        </ul>
+      </section>
+
+      <section id="proyek" aria-labelledby="judul-proyek">
+        <h2 id="judul-proyek">Proyek</h2>
+        <div class="projects">
+          <article class="project">
+            <h3>Katalog Resep Nusantara</h3>
+            <p>Situs statis berisi 20 resep dengan pencarian kategori dan tata letak responsif.</p>
+            <p class="tags">HTML5, CSS3</p>
+            <a href="#">Lihat proyek<span class="sr-only">: Katalog Resep Nusantara</span></a>
+          </article>
+          <article class="project">
+            <h3>Sistem Antrian Kampus</h3>
+            <p>Aplikasi web sederhana untuk mengatur antrian layanan akademik, dibuat bersama tim empat orang.</p>
+            <p class="tags">PHP, MySQL</p>
+            <a href="#">Lihat proyek<span class="sr-only">: Sistem Antrian Kampus</span></a>
+          </article>
+          <article class="project">
+            <h3>Blog Catatan Kuliah</h3>
+            <p>Blog pribadi untuk merangkum materi kuliah, dengan tampilan terang dan gelap.</p>
+            <p class="tags">HTML5, CSS3, JavaScript</p>
+            <a href="#">Lihat proyek<span class="sr-only">: Blog Catatan Kuliah</span></a>
+          </article>
+        </div>
+      </section>
+
+      <section id="kontak" aria-labelledby="judul-kontak">
+        <h2 id="judul-kontak">Kontak</h2>
+        <p>Terbuka untuk magang, proyek kolaborasi, dan diskusi seputar web.</p>
+        <address>
+          <ul class="contact-list">
+            <li>Email: <a href="mailto:nama@email.com">nama@email.com</a></li>
+            <li>GitHub: <a href="https://github.com/" rel="noopener">github.com/namamahasiswa</a></li>
+            <li>LinkedIn: <a href="https://www.linkedin.com/" rel="noopener">linkedin.com/in/namamahasiswa</a></li>
+          </ul>
+        </address>
+      </section>
+
+    </main>
+
+    <footer class="site-footer">
+      <p>&copy; 2026 Thouf Hazza Tedya Putera. Dibuat dengan HTML5 dan CSS3 untuk Tugas 1 Pemrograman Web.</p>
+    </footer>
+
+  </div>
+</body>
+</html>

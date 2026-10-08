@@ -1,0 +1,294 @@
+/* ==========================================================
+   Portofolio Personal - style.css
+   Daftar isi:
+   1. Variabel warna & tipografi
+   2. Reset dasar
+   3. Layout halaman
+   4. Profil & navigasi
+   5. Konten (section, timeline, skill, proyek, kontak)
+   6. Utilitas & aksesibilitas
+   7. Responsif (tablet & desktop)
+   ========================================================== */
+
+/* 1. Variabel */
+:root {
+  --ink: #1b2a41;
+  --ink-soft: #2c3e5a;
+  --paper: #f6f8fa;
+  --surface: #ffffff;
+  --accent: #0b7a75;
+  --accent-dark: #075a56;
+  --muted: #526273;
+  --line: #d9e0e6;
+  --on-ink: #eef2f6;
+
+  --font-body: "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-head: Georgia, "Times New Roman", serif;
+
+  --radius: 8px;
+  --gap: 1.5rem;
+}
+
+/* 2. Reset */
+*, *::before, *::after { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: var(--font-body);
+  font-size: 1rem;
+  line-height: 1.65;
+  color: var(--ink);
+  background: var(--paper);
+}
+
+h1, h2, h3 { font-family: var(--font-head); line-height: 1.25; margin: 0; }
+p { margin: 0 0 1rem; max-width: 65ch; }
+ul, ol { margin: 0; padding: 0; list-style: none; }
+a { color: var(--accent-dark); }
+a:hover { color: var(--ink); }
+
+/* 3. Layout halaman (mobile-first: satu kolom) */
+.page {
+  display: grid;
+  grid-template-columns: 1fr;
+  min-height: 100vh;
+}
+
+main {
+  padding: 2rem 1.25rem;
+  display: grid;
+  gap: 2.5rem;
+}
+
+/* 4. Profil & navigasi */
+.profile {
+  background: var(--ink);
+  color: var(--on-ink);
+  padding: 2rem 1.25rem 1rem;
+  text-align: center;
+}
+
+.avatar {
+  width: 112px;
+  height: 112px;
+  margin: 0 auto 1rem;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  font-family: var(--font-head);
+  font-size: 2.5rem;
+  background: var(--accent);
+  color: #fff;
+  border: 4px solid var(--ink-soft);
+}
+
+.profile h1 { font-size: 1.75rem; }
+.role { margin: 0.35rem auto 1.25rem; color: #b9c6d6; }
+
+.main-nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.25rem 0.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--ink-soft);
+}
+
+.main-nav a {
+  display: block;
+  padding: 0.4rem 0.75rem;
+  color: var(--on-ink);
+  text-decoration: none;
+  border-radius: var(--radius);
+}
+
+.main-nav a:hover { background: var(--ink-soft); }
+
+/* 5. Konten */
+section { scroll-margin-top: 1rem; }
+
+section h2 {
+  font-size: 1.6rem;
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.25rem;
+  border-bottom: 3px solid var(--accent);
+  display: inline-block;
+}
+
+/* Fakta singkat */
+.facts {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 0.75rem;
+  margin: 1.5rem 0 0;
+}
+
+.facts div {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  padding: 0.75rem 1rem;
+}
+
+.facts dt { font-size: 0.875rem; color: var(--muted); }
+.facts dd { margin: 0; font-weight: 600; }
+
+/* Timeline (pendidikan & pengalaman) */
+.timeline {
+  border-left: 2px solid var(--line);
+  margin-left: 0.5rem;
+}
+
+.timeline li {
+  position: relative;
+  padding: 0 0 1.5rem 1.5rem;
+}
+
+.timeline li::before {
+  content: "";
+  position: absolute;
+  left: -7px;
+  top: 0.45rem;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--accent);
+  border: 2px solid var(--paper);
+}
+
+.timeline h3 { font-size: 1.15rem; }
+.meta { color: var(--muted); font-size: 0.9rem; margin: 0.15rem 0 0.5rem; }
+
+/* Keahlian */
+.skills {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 1rem;
+}
+
+.skills label { display: block; font-weight: 600; margin-bottom: 0.25rem; }
+
+meter {
+  width: 100%;
+  height: 14px;
+}
+
+/* Proyek */
+.projects {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--gap);
+}
+
+.project {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-top: 4px solid var(--accent);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.project h3 { font-size: 1.15rem; margin-bottom: 0.5rem; }
+.project p { margin-bottom: 0.75rem; }
+.project .tags { color: var(--muted); font-size: 0.875rem; }
+.project a { margin-top: auto; font-weight: 600; }
+
+/* Kontak */
+address { font-style: normal; }
+.contact-list li { padding: 0.35rem 0; overflow-wrap: anywhere; }
+
+/* Footer */
+.site-footer {
+  padding: 1.25rem;
+  text-align: center;
+  font-size: 0.875rem;
+  color: var(--muted);
+  border-top: 1px solid var(--line);
+}
+
+.site-footer p { margin: 0 auto; }
+
+/* 6. Utilitas & aksesibilitas */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+}
+
+.skip-link {
+  position: absolute;
+  left: 0.5rem;
+  top: -4rem;
+  background: var(--accent);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  z-index: 10;
+}
+
+.skip-link:focus { top: 0.5rem; }
+
+a:focus-visible {
+  outline: 3px solid #f2b705;
+  outline-offset: 2px;
+}
+
+html { scroll-behavior: smooth; }
+
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
+
+/* 7. Responsif */
+
+/* Tablet: >= 640px */
+@media (min-width: 640px) {
+  main { padding: 2.5rem 2rem; }
+  .facts { grid-template-columns: repeat(3, 1fr); }
+  .skills { grid-template-columns: repeat(2, 1fr); gap: 1rem 2rem; }
+  .projects { grid-template-columns: repeat(2, 1fr); }
+}
+
+/* Desktop: >= 960px - profil menjadi sidebar tetap di kiri */
+@media (min-width: 960px) {
+  .page {
+    grid-template-columns: 300px 1fr;
+    grid-template-areas:
+      "profil konten"
+      "profil footer";
+    grid-template-rows: 1fr auto;
+  }
+
+  .profile {
+    grid-area: profil;
+    position: sticky;
+    top: 0;
+    height: 100vh;
+    padding: 3rem 1.5rem;
+    text-align: left;
+    overflow-y: auto;
+  }
+
+  .avatar { margin-left: 0; width: 128px; height: 128px; }
+  .role { margin-left: 0; }
+
+  .main-nav ul {
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 0.25rem;
+  }
+
+  main {
+    grid-area: konten;
+    padding: 3.5rem 3rem;
+    max-width: 960px;
+  }
+
+  .site-footer { grid-area: footer; }
+  .projects { grid-template-columns: repeat(3, 1fr); }
+}
